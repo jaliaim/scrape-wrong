@@ -1,0 +1,17 @@
+{
+  "name": "play-wrong",
+  "version": "1.0.0",
+  "description": "A powerful, serverless web scraper built with Playwright and deployed on Railway.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "cors": "^2.8.5",
+    "puppeteer-core": "^24.22.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-adblocker": "^2.13.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}
