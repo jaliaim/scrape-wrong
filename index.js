@@ -9,7 +9,7 @@ puppeteer.use(AdblockerPlugin({ blockTrackers: true }));
 
 const app = express();
 app.use(cors());
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 2000;
 
 app.get('/api/scrape', async (req, res) => {
   const { url, filter, clickSelector, origin: customOrigin, referer, iframe, screenshot, waitFor } = req.query;
