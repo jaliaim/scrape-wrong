@@ -17,7 +17,7 @@ RUN npm cache clean --force && npm install --no-optional
 COPY . .
 
 # Expose port
-EXPOSE 3000
+EXPOSE 2000
 
 # Start the app
 CMD [ "node", "index.js" ]
