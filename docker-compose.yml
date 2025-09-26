@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: scraper_app
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      - scraper_net
+
+  nginx:
+    image: nginx:alpine
+    container_name: scraper_nginx
+    restart: always
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./certs:/etc/ssl/certs:ro
+    networks:
+      - scraper_net
+
+networks:
+  scraper_net:
+    driver: bridge
