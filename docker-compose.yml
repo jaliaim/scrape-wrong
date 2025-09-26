@@ -1,12 +1,12 @@
 version: "3.9"
 
 services:
-  app:
-    build: ./scraper
+  scraper-app:
+    build: .                # Dockerfile is in the same folder
     container_name: scraper_app
     restart: always
     ports:
-      - "2000:2000"  # now the scraper runs on 2000
+      - "2000:2000"         # map container port to host
     networks:
       - lordflix_net
 
